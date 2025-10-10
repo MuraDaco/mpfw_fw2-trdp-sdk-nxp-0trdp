@@ -33,12 +33,13 @@
 
 include_guard()
 
+set(CURR_MOD_NAME     TRDP-SDK-NXP-0TRDP)
+
 ### **************************************************
 ### --- set ..._<module name>_CONFIG_DIR variable
 ## --- start section
 
     ## my own config file
-        set(CURR_MOD_NAME     TRDP-SDK-NXP-0TRDP)
 
         set(${CURR_MOD_NAME}_DEFAULT_CONFIG_RPATH  ${${CURR_MOD_NAME}_cmmn_SRC_RPATH}/v_${SDK_PLATFORM_LIB_VER}/config)
 
@@ -49,18 +50,16 @@ include_guard()
     ## --- end section
     ### **************************************************
 
-## ### **************************************************
-## ### --- set TOOLCHAIN_OPTIONS_DIR variable
-## ## --- start section
-## 
-##     set(${CURR_MOD_NAME}_EXT_LIB_RPATH                ${${CURR_MOD_NAME}_SRC_RPATH}/v_${SDK_PLATFORM_LIB_VER}/libs     )
-##     set(${CURR_MOD_NAME}_EXT_LIB_DIR_FROM_BUILD       ${MPFW_CODE_DIR_FROM_BUILD}/${${CURR_MOD_NAME}_EXT_LIB_RPATH}    )
-##     message("DEBUG - EXTERNAL LIB - ${CURR_MOD_NAME}_EXT_LIB_DIR_FROM_BUILD:      ${${CURR_MOD_NAME}_EXT_LIB_DIR_FROM_BUILD}")
-## 
-##     set(MPFW_CODE_CMAKE_LINK_SCRIPT_DIR_FROM_BUILD  ${MPFW_CODE_DIR_FROM_BUILD}/cmake/mpfw_fw2_cmake/v_${CMAKE_SRC_VER}/toolchain/${PLATFORM_NAME}/link_script )
-##     message("DEBUG - LINK SCRIPT - MPFW_CODE_CMAKE_LINK_SCRIPT_DIR_FROM_BUILD:  ${MPFW_CODE_CMAKE_LINK_SCRIPT_DIR_FROM_BUILD}")
-## 
-##     set(TOOLCHAIN_OPTIONS_DIR       ${${CURR_MOD_NAME}_WSP_DIR}/toolchain )
-## 
-##     ## --- end section
-##     ### **************************************************
+### **************************************************
+### --- set TOOLCHAIN_OPTIONS_DIR variable
+## --- start section
+
+    set(${CURR_MOD_NAME}_cmmn_EXT_LIB_RPATH                ${${CURR_MOD_NAME}_cmmn_SRC_RPATH}/v_${SDK_PLATFORM_LIB_VER}/libs     )
+    set(${CURR_MOD_NAME}_cmmn_EXT_LIB_DIR_FROM_BUILD       ${MPFW_CODE_DIR_FROM_BUILD}/${${CURR_MOD_NAME}_cmmn_EXT_LIB_RPATH}    )
+    message("DEBUG - EXTERNAL LIB - ${CURR_MOD_NAME}_cmmn_EXT_LIB_DIR_FROM_BUILD:      ${${CURR_MOD_NAME}_cmmn_EXT_LIB_DIR_FROM_BUILD}")
+
+    set(MPFW_CODE_CMAKE_LINK_SCRIPT_DIR_FROM_BUILD  ${MPFW_CODE_DIR_FROM_BUILD}/cmake/mpfw_fw2_cmake/v_${CMAKE_SRC_VER}/toolchain/${PLATFORM_NAME}/link_script )
+    message("DEBUG - LINK SCRIPT - MPFW_CODE_CMAKE_LINK_SCRIPT_DIR_FROM_BUILD:  ${MPFW_CODE_CMAKE_LINK_SCRIPT_DIR_FROM_BUILD}")
+
+    ## --- end section
+    ### **************************************************
