@@ -35,6 +35,7 @@ include_guard()
 
     set(CURR_MOD_NAME       TRDP-SDK-NXP-0TRDP)
 
-    set(${TRDP-SDK-NXP-0TRDP}_DEPS_LIST   
+    set(${CURR_MOD_NAME}_DEPS_LIST   
         ## name             _WSP_VER    _SRC_CFG    EXTNL_LIB ([N]o/[Y]es)
+        FNCT-HW-2WRPR-SDK   09hw_2      04          N
     )
